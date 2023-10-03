@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "minecraft:purpur_block"
+    "item": "minecraft:chorus_flower"
   },
   "result": "minecraft:purple_dye",
   "experience": 1,
