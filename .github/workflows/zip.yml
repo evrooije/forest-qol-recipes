@@ -23,3 +23,5 @@ jobs:
       with:
         artifacts: "forest-qol-recipes.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
+        allowUpdates: true
+        
