@@ -12,18 +12,16 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@main
-    - name: Get Ref Name
-      run: refName="${{ github.ref_name }}"
     - name: Archive Release
       uses: thedoctor0/zip-release@0.7.1
       with:
         type: 'zip'
-        filename: 'forest-qol-recipes-$refName.zip'
+        filename: 'forest-qol-recipes-${{ github.ref_name }}.zip'
         exclusions: '*.git*'
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "forest-qol-recipes-$refName.zip"
+        artifacts: "forest-qol-recipes-${{ github.ref_name }}.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         allowUpdates: true
         
